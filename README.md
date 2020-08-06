@@ -24,3 +24,12 @@ https://www.youtube.com/watch?v=mlTO510zO78
 ## How to run each project
 
 `stack run ./app/Main.hs`
+
+## How to add a package
+
+1. set resolver to latest stable build https://www.stackage.org/snapshots
+2. find a package to add on https://hackage.haskell.org/
+3. go to package.yaml
+4. find the _dependencies_ section
+5. add a dependency
+6. `stack build`

@@ -4,13 +4,13 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: fc1649b6f181e3d92390bac2b56e80f1660128c307dd15ff01ee0c2eee1a635a
+-- hash: 65028486ecbb3145384983d2fa47cb708c20186e1c8a14f5eba2f5d203669621
 
-name:           snap
+name:           snap-test
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/branjwong/snap#readme>
-homepage:       https://github.com/branjwong/snap#readme
-bug-reports:    https://github.com/branjwong/snap/issues
+description:    Please see the README on GitHub at <https://github.com/branjwong/snap-test#readme>
+homepage:       https://github.com/branjwong/snap-test#readme
+bug-reports:    https://github.com/branjwong/snap-test/issues
 author:         Brandon Wong
 maintainer:     branjwong@gmail.com
 copyright:      Copyright (c) 2020 Brandon Wong
@@ -23,40 +23,40 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/branjwong/snap
+  location: https://github.com/branjwong/snap-test
 
 library
   exposed-modules:
       Lib
   other-modules:
-      Paths_snap
+      Paths_snap_test
   hs-source-dirs:
       src
   build-depends:
       base >=4.7 && <5
   default-language: Haskell2010
 
-executable snap-exe
+executable snap-test-exe
   main-is: Main.hs
   other-modules:
-      Paths_snap
+      Paths_snap_test
   hs-source-dirs:
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , snap
+    , snap-test
   default-language: Haskell2010
 
-test-suite snap-test
+test-suite snap-test-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Paths_snap
+      Paths_snap_test
   hs-source-dirs:
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , snap
+    , snap-test
   default-language: Haskell2010

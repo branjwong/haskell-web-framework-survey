@@ -1,4 +1,4 @@
-# snap
+# snap-test
 
 http://snapframework.com/
 

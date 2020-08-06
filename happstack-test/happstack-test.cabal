@@ -1,0 +1,65 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: cc8cd81638e50f21a6bffe46f3a73b7fd5bb8f2c15f28c398b8d928fa4d579ea
+
+name:           happstack-test
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/branjwong/happstack-test#readme>
+homepage:       https://github.com/branjwong/happstack-test#readme
+bug-reports:    https://github.com/branjwong/happstack-test/issues
+author:         Brandon Wong
+maintainer:     branjwong@gmail.com
+copyright:      Copyright (c) 2020 Brandon Wong
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/branjwong/happstack-test
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_happstack_test
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , happstack-lite
+  default-language: Haskell2010
+
+executable happstack-test-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_happstack_test
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , happstack-lite
+    , happstack-test
+  default-language: Haskell2010
+
+test-suite happstack-test-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_happstack_test
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , happstack-lite
+    , happstack-test
+  default-language: Haskell2010
