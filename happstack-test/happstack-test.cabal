@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: cc8cd81638e50f21a6bffe46f3a73b7fd5bb8f2c15f28c398b8d928fa4d579ea
+-- hash: c27f8c3d76cc2819f1eddc217a1e835609f04002e9516d05b28cdca36e228a3e
 
 name:           happstack-test
 version:        0.1.0.0
@@ -34,6 +34,7 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , happstack-lite
   default-language: Haskell2010
 
@@ -46,6 +47,7 @@ executable happstack-test-exe
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , happstack-lite
     , happstack-test
   default-language: Haskell2010
@@ -60,6 +62,7 @@ test-suite happstack-test-test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , happstack-lite
     , happstack-test
   default-language: Haskell2010
