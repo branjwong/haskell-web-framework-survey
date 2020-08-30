@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 65028486ecbb3145384983d2fa47cb708c20186e1c8a14f5eba2f5d203669621
+-- hash: 98ecc835074265097a7ed7b429b9e7cdab8762e76a706d5ea843ad99913dc07a
 
 name:           snap-test
 version:        0.1.0.0
@@ -34,6 +34,8 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , snap-core
+    , snap-server
   default-language: Haskell2010
 
 executable snap-test-exe
@@ -45,6 +47,8 @@ executable snap-test-exe
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , snap-core
+    , snap-server
     , snap-test
   default-language: Haskell2010
 
@@ -58,5 +62,7 @@ test-suite snap-test-test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , snap-core
+    , snap-server
     , snap-test
   default-language: Haskell2010
